@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgriDroneSpray — Precision Drone Spraying for Indian Farms</title>
+<link rel="icon" type="image/png" href="images/agrilogo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="home-page">
+
+  <nav>
+    <div class="logo">
+    <img src="images/agrilogo.png" alt="Agri Logo" class="logo-mark">
+      AgriDroneSpray
+    </div>
+    <div class="nav-links">
+      <a class="link" href="#about">About</a>
+      <a class="link" href="#services">Services</a>
+      <a class="link" href="#how">How it works</a>
+      <a class="link" onclick="showPage('subscribe')" style="cursor:pointer;">Subscriptions</a>
+      <div class="dropdown" id="partner-dropdown">
+        <a class="link dropdown-toggle" onclick="toggleDropdown(event)">Partner With Us ▾</a>
+        <div class="dropdown-menu">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSezo7x4SZkI5Ug528nwZWpwgu4HiYxoPdIJz7jRpflZesdfiA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Namo Drone Didi<span class="sub-label">Register as a woman drone pilot</span></a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfd8u_MVBABeG5TDL6mk4-8PeZevK_sm74b-hEuBDDJDRCDsw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Drone Manufacturer<span class="sub-label">Register as a hardware supplier</span></a>
+        </div>
+      </div>
+      <a class="link" href="#contact">Contact</a>
+      <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScYnKKK-byx_Y8SdkagxnxbbaeSUS8AXygkr1INLG9EoblY4w/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Register Your Farm</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">DGCA-compliant · NPNT drones</div>
+      <h1>Spray smarter.<br>Grow <span class="hl">more</span>, waste less.</h1>
+      <p class="sub">AgriDroneSpray brings precision aerial spraying to Indian farmers, FPOs and Custom Hiring Centres — cutting chemical waste, protecting workers, and getting your fields covered in a fraction of the time.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScYnKKK-byx_Y8SdkagxnxbbaeSUS8AXygkr1INLG9EoblY4w/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Book a Spray →</a>
+        <a class="btn btn-outline" href="#services">See our services</a>
+      </div>
+
+    </div>
+
+    <div class="scene" aria-hidden="true">
+      <div class="field-rows"></div>
+      <svg class="flight-path" viewBox="0 0 640 260" width="100%" height="100%">
+        <path class="path-line" d="M -60 40 C 120 10, 220 130, 340 60 S 500 -10, 620 70" stroke="#1B4D3E" stroke-width="2" fill="none" opacity="0.35"/>
+        <g class="drone-group">
+          <g transform="translate(-18,-14)">
+            <circle cx="0" cy="24" r="3" fill="#3E9B5C" class="droplet"/>
+            <circle cx="10" cy="24" r="3" fill="#3E9B5C" class="droplet"/>
+            <circle cx="20" cy="24" r="3" fill="#3E9B5C" class="droplet"/>
+            <line x1="-4" y1="4" x2="36" y2="4" stroke="#152A1F" stroke-width="2"/>
+            <line x1="16" y1="-6" x2="16" y2="14" stroke="#152A1F" stroke-width="2"/>
+            <circle cx="-4" cy="4" r="6" fill="none" stroke="#1B4D3E" stroke-width="2"/>
+            <circle cx="36" cy="4" r="6" fill="none" stroke="#1B4D3E" stroke-width="2"/>
+            <rect x="10" y="2" width="12" height="8" rx="2" fill="#E3A63E"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div>
+        <div class="eyebrow">Who we are</div>
+        <h2>Built by people who know Indian fields, not just drones.</h2>
+        <p class="about-lead" style="margin-top:18px;">We're a regional drone spraying operation working directly with farmers, FPOs and Custom Hiring Centres. We started as a single-district pilot and are building toward a franchised network of operators across the country — every hub trained, insured, and fully compliant with DGCA rules.</p>
+      </div>
+      <div class="value-list">
+        <div class="value-item">
+          <div class="value-icon" style="background:var(--cobalt);">✓</div>
+          <div><h3>Certified pilots, every flight</h3><p>All our operators hold Remote Pilot Certificates and fly NPNT-registered drones with full flight logs.</p></div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon" style="background:var(--leaf);">⛨</div>
+          <div><h3>Insured, documented, accountable</h3><p>Every sortie is covered by public liability insurance and logged with weather, chemical batch and consent records.</p></div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon" style="background:var(--marigold); color:var(--ink);">%</div>
+          <div><h3>Priced for smallholders</h3><p>Pay-per-acre pricing and FPO partnerships mean you don't need to own a drone to get drone-grade coverage.</p></div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon" style="background:var(--chili);">↑</div>
+          <div><h3>Less input, better yield</h3><p>Even spray coverage cuts chemical waste and reduces the crop damage that comes with uneven manual spraying.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section class="services" id="services">
+    <div class="eyebrow">What we offer</div>
+    <h2>One booking gets you the drone, the pilot, and the paperwork.</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <span class="tag tag-core">Core service</span>
+        <h3>Pesticide Spraying</h3>
+        <p>Even, precise pesticide application across your field — faster than manual spraying and without exposing workers to chemicals.</p>
+        <div class="price-row"><span class="price">₹350–450</span><span class="price-unit">per acre</span></div>
+      </div>
+      <div class="service-card">
+        <span class="tag tag-core">Core service</span>
+        <h3>Liquid Fertilizer Spraying</h3>
+        <p>Uniform fertilizer coverage timed to your crop stage, reducing overuse and runoff while improving nutrient uptake.</p>
+        <div class="price-row"><span class="price">₹350–450</span><span class="price-unit">per acre</span></div>
+      </div>
+      <div class="service-card">
+        <span class="tag tag-premium">Premium</span>
+        <h3>Field Mapping & Prescription</h3>
+        <p>NDVI and multispectral imaging to spot stressed crop zones early, with a spray prescription built from the data.</p>
+        <div class="price-row"><span class="price">On request</span><span class="price-unit">by field size</span></div>
+      </div>
+      <div class="service-card">
+        <span class="tag tag-premium">Premium</span>
+        <h3>Variable-Rate Spraying</h3>
+        <p>Spray rate adjusts automatically across the field based on your map data — more where it's needed, less where it isn't.</p>
+        <div class="price-row"><span class="price">On request</span><span class="price-unit">by field size</span></div>
+      </div>
+      <div class="service-card">
+        <span class="tag tag-premium">Premium</span>
+        <h3>FPO & Large Farm Subscriptions</h3>
+        <p>Season-long service contracts for FPOs and large landholders, with priority scheduling across your sowing calendar.</p>
+        <div class="price-row"><span class="price">Custom</span><span class="price-unit">season contract</span></div>
+      </div>
+      <div class="service-card">
+        <span class="tag tag-premium">Premium</span>
+        <h3>Operator Training & Licensing</h3>
+        <p>Want to run your own hub? We train and certify local operators and license our operating playbook.</p>
+        <div class="price-row"><span class="price">Custom</span><span class="price-unit">franchise fee</span></div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="how" id="how">
+    <div class="eyebrow">The process</div>
+    <h2>From booking to a sprayed field, in four steps.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Register your farm</h3>
+        <p>Tell us your location, farm size and crop — takes under two minutes.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>We schedule your slot</h3>
+        <p>A certified pilot is assigned and your spraying date is confirmed.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Drone sprays your field</h3>
+        <p>NPNT-compliant drone covers up to 20 acres a day, evenly and on time.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>You get the report</h3>
+        <p>Flight log, chemical batch and coverage record — for your own records.</p>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section class="cta-band">
+    <h2>Ready to get your field sprayed?</h2>
+    <p>Registration takes two minutes. Our team will call to confirm your slot.</p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScYnKKK-byx_Y8SdkagxnxbbaeSUS8AXygkr1INLG9EoblY4w/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Register Your Farm →</a>
+      <a class="btn btn-outline" style="border-color:white; color:white;" onclick="showPage('subscribe')">View Subscription Plans</a>
+    </div>
+  </section>
+
+ 
+  <footer id="contact">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo" style="display:flex; align-items:center; gap:10px;">
+          <img src="images/agrilogo.png" alt="Agri Logo" class="logo-mark">
+          AgriDroneSpray
+        </div>
+        <p style="max-width:280px;">Precision drone spraying for Indian farmers, FPOs and Custom Hiring Centres.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:globalexpressgroup@gmail.com">globalexpressgroup@gmail.com</a>
+        <a href="tel:+919650560277">+91 96505 60277</a>
+        <a href="tel:+919910196123">+91 99101 96123</a>
+      </div>
+      <div>
+        <h4>Get started</h4>
+        <a href="#services">Our services</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScYnKKK-byx_Y8SdkagxnxbbaeSUS8AXygkr1INLG9EoblY4w/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Register your farm</a>
+        <a href="#about">Who we are</a>
+      </div>
+      <div>
+        <h4>Partner with us</h4>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSezo7x4SZkI5Ug528nwZWpwgu4HiYxoPdIJz7jRpflZesdfiA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Namo Drone Didi</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfd8u_MVBABeG5TDL6mk4-8PeZevK_sm74b-hEuBDDJDRCDsw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Drone Manufacturer</a>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <span>© 2026 AgriDroneSpray. All rights reserved.</span>
+      <span>DGCA registered · NPNT compliant</span>
+    </div>
+  </footer>
+</div>
+
+<div id="subscribe-page">
+  <nav>
+    <div class="logo">
+      <img src="images/agrilogo.png" alt="Agri Logo" class="logo-mark">
+      AgriDroneSpray
+    </div>
+    <div class="nav-links">
+      <a class="btn btn-outline" onclick="showPage('home')">← Back to Home</a>
+    </div>
+  </nav>
+
+  <div class="plans-hero">
+    <div class="eyebrow" style="justify-content:center;">Subscription plans</div>
+    <h1>Pick a plan, we'll cover the rest of the season</h1>
+    <p>Subscribe once and skip re-booking for every spray — our team confirms each visit with you in advance.</p>
+  </div>
+
+  <div class="plans-grid" id="plans-grid">
+    <div class="plan-card">
+      <h3>Pay-As-You-Spray</h3>
+      <p class="plan-desc">No commitment — book and pay for each visit as you need it.</p>
+      <div class="plan-price">₹350–450<span class="unit"> / acre / visit</span></div>
+      <ul class="plan-features">
+        <li>Pesticide or fertilizer spraying</li>
+        <li>Certified pilot & NPNT-compliant drone</li>
+        <li>Flight log & coverage report</li>
+        <li>Book any time, no lock-in</li>
+      </ul>
+      <button class="btn btn-outline btn-block" onclick="openSubscriptionForm('Pay-As-You-Spray')">Subscribe Now</button>
+    </div>
+
+    <div class="plan-card featured">
+      <span class="plan-badge">Most popular</span>
+      <h3>Seasonal Plan</h3>
+      <p class="plan-desc">Two scheduled sprayings across your crop's growth cycle, at a discounted rate.</p>
+      <div class="plan-price">₹640<span class="unit"> / acre / season</span></div>
+      <ul class="plan-features">
+        <li>2 sprayings across the season</li>
+        <li>Priority scheduling over pay-per-visit</li>
+        <li>Free field consultation before first visit</li>
+        <li>Locked-in seasonal rate</li>
+      </ul>
+      <button class="btn btn-primary btn-block" onclick="openSubscriptionForm('Seasonal Plan')">Subscribe Now</button>
+    </div>
+
+    <div class="plan-card">
+      <h3>Annual Grower Plan</h3>
+      <p class="plan-desc">Best for multi-crop farms and FPOs spraying across more than one season a year.</p>
+      <div class="plan-price">₹1,150<span class="unit"> / acre / year</span></div>
+      <ul class="plan-features">
+        <li>Up to 4 sprayings across the year</li>
+        <li>Top priority scheduling</li>
+        <li>Free NDVI field map, once a year</li>
+        <li>Dedicated account contact</li>
+      </ul>
+      <button class="btn btn-outline btn-block" onclick="openSubscriptionForm('Annual Grower Plan')">Subscribe Now</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+ 
+  var GOOGLE_FORMS = {
+    subscription: "https://docs.google.com/forms/d/e/1FAIpQLScl67FDe9LzOm6SFFsbCEMr2iofjRhIvAct-5kkSAQ00BEtBw/viewform?usp=publish-editor"
+  };
+
+  function openSubscriptionForm(planName) {
+    var url = GOOGLE_FORMS.subscription + "?usp=pp_url&entry.111111111=" + encodeURIComponent(planName);
+    window.open(url, "_blank", "noopener,noreferrer");
+  }
+</script>
+
+</body>
+</html>
