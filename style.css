@@ -1326,3 +1326,168 @@ h2 {
     min-height: 46px;
   }
 }
+
+/* =============================================================
+   AgriDroneSpray App Download CTA — Floating Button
+   Scoped with .ads-app-download-cta / .ads-app-cta-* prefixes.
+   z-index: 999 keeps it BELOW the chatbot (z-index: 1000/1001).
+   Chatbot: right:24px bottom:24px, height ~54px → gap 16px
+   Desktop bottom offset: 24 + 54 + 16 = 94px ≈ 96px
+   ============================================================= */
+
+.ads-app-download-cta {
+  /* Positioning — right side, above chatbot */
+  position: fixed;
+  right: 24px;
+  bottom: 96px;
+  z-index: 999;
+
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  /* Sizing & shape */
+  padding: 13px 18px;
+  border-radius: 15px;
+
+  /* Colours — match existing dark green system */
+  background: var(--green-800);        /* #204c3f */
+  color: var(--white);
+
+  /* Border — subtle definition, consistent with chatbot launcher */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  /* Shadow — same family as chatbot launcher */
+  box-shadow:
+    0 14px 32px -12px rgba(17, 39, 31, 0.32),
+    0 4px 10px -4px rgba(17, 39, 31, 0.18);
+
+  /* Typography */
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;      /* 14px */
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+
+  /* Transition — 250ms, matches .btn and .ads-chat-launcher */
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+
+  /* Ensure no text-decoration underline from base <a> reset */
+  cursor: pointer;
+}
+
+/* Hover: slight lift + deeper shadow + darker green */
+.ads-app-download-cta:hover {
+  background: var(--green-900);        /* #183d34 */
+  transform: translateY(-3px);
+  box-shadow:
+    0 20px 40px -14px rgba(17, 39, 31, 0.38),
+    0 6px 14px -6px rgba(17, 39, 31, 0.22);
+}
+
+/* Active: snap back */
+.ads-app-download-cta:active {
+  transform: translateY(0);
+  box-shadow:
+    0 8px 18px -10px rgba(17, 39, 31, 0.28);
+}
+
+/* Focus — keyboard accessible, matches :focus-visible in base CSS */
+.ads-app-download-cta:focus-visible {
+  outline: 3px solid var(--green-900);
+  outline-offset: 3px;
+  background: var(--green-900);
+}
+
+/* ── Icon ── */
+.ads-app-cta-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+
+  /* Subtle terracotta tint on the download arrow on hover */
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+/* Micro-interaction: download arrow nudges down on hover */
+.ads-app-download-cta:hover .ads-app-cta-icon {
+  transform: translateY(2px);
+}
+
+/* ── Label ── */
+.ads-app-cta-label {
+  display: inline-block;
+  letter-spacing: 0.01em;
+}
+
+/* =============================================================
+   RESPONSIVE — Mobile ≤ 600px
+   Matches chatbot's mobile breakpoint (right:16px bottom:16px)
+   Chatbot mobile: border-radius:50%, height ~54px estimate
+   Mobile bottom offset: 16 + 54 + 14 = 84px
+   Compact pill — icon + short label, minimum 48px touch target
+   ============================================================= */
+@media (max-width: 600px) {
+  .ads-app-download-cta {
+    right: 16px;
+    bottom: 84px;
+
+    /* Compact pill — keep label, shrink padding */
+    padding: 13px 14px;
+    border-radius: 50px;     /* pill shape on mobile */
+    gap: 7px;
+
+    /* Minimum 48px touch target height */
+    min-height: 48px;
+  }
+
+  .ads-app-cta-label {
+    font-size: 0.8125rem;  /* 13px */
+  }
+
+  .ads-app-cta-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Very small screens — icon-only to save space */
+@media (max-width: 360px) {
+  .ads-app-download-cta {
+    padding: 14px;
+    border-radius: 50%;
+    gap: 0;
+    min-width: 48px;
+    min-height: 48px;
+    justify-content: center;
+  }
+
+  .ads-app-cta-label {
+    display: none;
+  }
+}
+
+/* Tablet tweaks 601–980px — slightly reduce gap */
+@media (min-width: 601px) and (max-width: 980px) {
+  .ads-app-download-cta {
+    bottom: 96px;   /* same as desktop — chatbot stays at bottom:24px */
+    right: 24px;
+  }
+}
+
+/* Honour prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .ads-app-download-cta,
+  .ads-app-cta-icon {
+    transition: none !important;
+  }
+
+  .ads-app-download-cta:hover .ads-app-cta-icon {
+    transform: none !important;
+  }
+}
